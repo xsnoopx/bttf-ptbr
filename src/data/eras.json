@@ -1,0 +1,296 @@
+{
+  "_comment": "Lighting and atmosphere 'looks'. Angles in degrees. sunElevation: degrees above the horizon (negative = below). sunYaw: Unreal yaw of the light's travel direction. Intensities in lux. exposure = EV bias. lights: 0..1 street lamps / lit windows. wetness / rain: 0..1. Note: a low sun is already reddened by the atmosphere, so sunColor is kept cool to stop buildings turning orange. age: 0 = freshly built, 1 = grimy and weathered (drives dirt on walls and ground).",
+  "dates": {
+    "1955": "05 NOV 1955  06:15 PM",
+    "1985": "26 OUT 1985  07:28 PM",
+    "2015": "21 OUT 2015  05:42 PM"
+  },
+  "defaultLook": {
+    "1955": "1955_golden",
+    "1985": "1985_dusk",
+    "2015": "2015_sunset"
+  },
+  "looks": {
+    "1955_golden": {
+      "sunElevation": 16,
+      "sunYaw": -32,
+      "sunIntensity": 42000,
+      "sunColor": [
+        0.9,
+        0.95,
+        1.0
+      ],
+      "moonIntensity": 0,
+      "skyIntensity": 0.95,
+      "fogDensity": 0.012,
+      "fogFalloff": 0.12,
+      "exposure": 0.75,
+      "saturation": 1.0,
+      "temperature": 6300,
+      "bloom": 0.55,
+      "vignette": 0.25,
+      "lights": 0.0,
+      "wetness": 0.0,
+      "rain": 0.0,
+      "clouds": 0.45,
+      "age": 0.0,
+      "exposureMin": 10.5,
+      "exposureMax": 15.0,
+      "contrast": 1.1,
+      "shadowTint": [
+        0.94,
+        0.99,
+        1.09
+      ],
+      "highlightTint": [
+        1.06,
+        1.0,
+        0.93
+      ]
+    },
+    "1955_storm": {
+      "sunElevation": -40,
+      "sunYaw": -32,
+      "sunIntensity": 1.0,
+      "sunColor": [
+        0.6,
+        0.7,
+        1.0
+      ],
+      "moonIntensity": 3.0,
+      "skyIntensity": 1.0,
+      "fogDensity": 0.02,
+      "fogFalloff": 0.07,
+      "exposure": 0.45,
+      "saturation": 0.85,
+      "temperature": 7200,
+      "bloom": 1.0,
+      "vignette": 0.45,
+      "lights": 1.0,
+      "wetness": 1.0,
+      "rain": 1.0,
+      "clouds": 1.0,
+      "age": 0.0,
+      "exposureMin": -1.0,
+      "exposureMax": 5.5,
+      "contrast": 1.08,
+      "shadowTint": [
+        0.92,
+        0.98,
+        1.1
+      ],
+      "highlightTint": [
+        0.98,
+        1.0,
+        1.04
+      ],
+      "fxTint": [
+        0.82,
+        0.9,
+        1.1
+      ]
+    },
+    "1985_dusk": {
+      "sunElevation": -3.5,
+      "sunYaw": -24,
+      "sunIntensity": 30000,
+      "sunColor": [
+        1.0,
+        0.78,
+        0.6
+      ],
+      "moonIntensity": 0.25,
+      "skyIntensity": 1.0,
+      "fogDensity": 0.012,
+      "fogFalloff": 0.1,
+      "exposure": -0.25,
+      "saturation": 1.0,
+      "temperature": 6700,
+      "tint": -0.28,
+      "bloom": 0.9,
+      "vignette": 0.35,
+      "lights": 1.0,
+      "wetness": 0.5,
+      "rain": 0.0,
+      "clouds": 0.5,
+      "age": 1.0,
+      "exposureMin": 0.0,
+      "exposureMax": 9.5,
+      "contrast": 1.05,
+      "shadowTint": [
+        0.93,
+        0.99,
+        1.1
+      ],
+      "highlightTint": [
+        1.07,
+        1.0,
+        0.92
+      ],
+      "fxTint": [
+        1.15,
+        0.76,
+        1.0
+      ]
+    },
+    "2015_sunset": {
+      "sunElevation": 11,
+      "sunYaw": -18,
+      "sunIntensity": 30000,
+      "sunColor": [
+        0.84,
+        0.9,
+        1.0
+      ],
+      "moonIntensity": 0,
+      "skyIntensity": 0.92,
+      "fogDensity": 0.016,
+      "fogFalloff": 0.1,
+      "exposure": 0.7,
+      "saturation": 1.05,
+      "temperature": 6300,
+      "bloom": 0.75,
+      "vignette": 0.25,
+      "lights": 0.45,
+      "wetness": 0.0,
+      "rain": 0.0,
+      "clouds": 0.6,
+      "age": 0.35,
+      "exposureMin": 8.5,
+      "exposureMax": 14.5,
+      "contrast": 1.08,
+      "shadowTint": [
+        0.93,
+        0.98,
+        1.1
+      ],
+      "highlightTint": [
+        1.08,
+        0.99,
+        0.93
+      ]
+    },
+    "2015_day": {
+      "sunElevation": 52,
+      "sunYaw": -28,
+      "sunIntensity": 95000,
+      "sunColor": [
+        1.0,
+        0.97,
+        0.92
+      ],
+      "moonIntensity": 0,
+      "skyIntensity": 0.95,
+      "fogDensity": 0.008,
+      "fogFalloff": 0.12,
+      "exposure": 0.35,
+      "saturation": 1.08,
+      "temperature": 6500,
+      "bloom": 0.55,
+      "vignette": 0.2,
+      "lights": 0.0,
+      "wetness": 0.0,
+      "rain": 0.0,
+      "clouds": 0.35,
+      "age": 0.3,
+      "exposureMin": 10.5,
+      "exposureMax": 15.5,
+      "contrast": 1.1,
+      "shadowTint": [
+        0.94,
+        0.99,
+        1.1
+      ],
+      "highlightTint": [
+        1.05,
+        1.0,
+        0.95
+      ]
+    },
+    "2015_night": {
+      "sunElevation": -32,
+      "sunYaw": -24,
+      "sunIntensity": 1.0,
+      "sunColor": [
+        0.6,
+        0.7,
+        1.0
+      ],
+      "moonIntensity": 1.6,
+      "skyIntensity": 1.0,
+      "fogDensity": 0.03,
+      "fogFalloff": 0.06,
+      "exposure": 0.55,
+      "saturation": 1.12,
+      "temperature": 6900,
+      "bloom": 1.25,
+      "vignette": 0.4,
+      "lights": 1.0,
+      "wetness": 1.0,
+      "rain": 0.0,
+      "clouds": 0.45,
+      "age": 0.3,
+      "exposureMin": -0.5,
+      "exposureMax": 6.0,
+      "contrast": 1.1,
+      "shadowTint": [
+        0.86,
+        0.97,
+        1.16
+      ],
+      "highlightTint": [
+        1.06,
+        0.97,
+        1.03
+      ],
+      "fxTint": [
+        0.85,
+        0.92,
+        1.12
+      ]
+    },
+    "1955_evening": {
+      "sunElevation": -2.5,
+      "sunYaw": -30,
+      "sunIntensity": 24000,
+      "sunColor": [
+        1.0,
+        0.8,
+        0.64
+      ],
+      "moonIntensity": 0.3,
+      "skyIntensity": 1.0,
+      "fogDensity": 0.012,
+      "fogFalloff": 0.1,
+      "exposure": -0.15,
+      "saturation": 1.0,
+      "temperature": 6500,
+      "tint": -0.18,
+      "bloom": 0.85,
+      "vignette": 0.32,
+      "lights": 1.0,
+      "wetness": 0.0,
+      "rain": 0.0,
+      "clouds": 0.4,
+      "age": 0.0,
+      "exposureMin": 0.0,
+      "exposureMax": 9.5,
+      "contrast": 1.06,
+      "shadowTint": [
+        0.93,
+        0.99,
+        1.1
+      ],
+      "highlightTint": [
+        1.07,
+        1.0,
+        0.92
+      ],
+      "fxTint": [
+        1.1,
+        0.85,
+        1.0
+      ]
+    }
+  }
+}

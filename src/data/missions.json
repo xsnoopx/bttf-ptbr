@@ -1,0 +1,1167 @@
+{
+  "_comment": "Story missions. Positions are plan metres [x east, y north, z up]; yaw is degrees counter-clockwise from east. Objective types: dialog, goto, collect, speed, circuits, jump, lightning, hover, set_look, grant, and for the hoverboard board (pick one up), ride (checkpoints in order), tow (hold on to the hover-cab), bail (stall over the pond, jump off as the gang charges), and for the dance mission car (get into the car), pickup (stop beside 'person' and let him in), lure (walk up to the 'chasers' standing at 'pos', then keep away from them for 'seconds'). 'seconds' on goto/collect/ride/pickup makes it timed; 'chase' puts the gang on the hero's tail; 'retry' is where a failed objective restarts ('onFoot', 'board' and 'car' place the hero on foot or on the board and park the car; 'run' starts him running, 'glide' starts him riding at that many m/s, 'chased' starts the gang on his tail); 'begin' is the same kind of place, applied when the story reaches the step (what a film or a line leaves him doing), not on a retry (on a set_look with 'fade' it is applied while the screen is black, and its 'boardAt' then puts his own board down there). 'voice' names the recorded line (voices.json) when it is not '<mission>_<index>'; 'recover' gives the mission's fading 'photo' time back (the photograph is the mission's clock: 'seconds' is a whole one, each step done winds it back up, a retry starts with a whole one); 'cast' places the story's people for a range of objectives (somebody whose place changes walks to the new one); 'passenger' is somebody who rides beside the hero for objectives 'from'..'to' and then gets out and stands at 'wait'. The films that join the missions are in cutscenes.json (Docs/STORY_FLOW.md). The m6_hover mission is written by Tools/data/make_hover.py.",
+  "missions": [
+    {
+      "id": "m1_experiment",
+      "title": "Experimento Temporal Número Um",
+      "briefing": "Shopping Twin Pines, 1985. Doc Brown tem algo para lhe mostrar.",
+      "start": {
+        "pos": [
+          400,
+          -140,
+          0.3
+        ],
+        "yaw": 180,
+        "era": "1985",
+        "look": "1985_dusk"
+      },
+      "objectives": [
+        {
+          "type": "dialog",
+          "speaker": "Doc",
+          "text": "Marty! Você veio. Essa é a grande: uma máquina do tempo feita de um carro esportivo. Quando essa belezinha chegar a oitenta e oito milhas por hora, vai ver umas coisas bem sérias.",
+          "seconds": 9
+        },
+        {
+          "type": "grant",
+          "fuel": 1
+        },
+        {
+          "type": "dialog",
+          "speaker": "Doc",
+          "text": "O reator tem uma carga. Ligue os circuitos de tempo com T e ajuste o destino para 5 de novembro de 1955 com Q e E.",
+          "seconds": 9
+        },
+        {
+          "type": "circuits",
+          "dest": "1955",
+          "text": "Ligue os circuitos de tempo [T] e ajuste o destino para 1955 [Q / E]"
+        },
+        {
+          "type": "goto",
+          "pos": [
+            -700,
+            -2,
+            0
+          ],
+          "radius": 22,
+          "text": "Dirija para oeste pela cidade até a linha de partida no Condomínio Lyon"
+        },
+        {
+          "type": "dialog",
+          "speaker": "Doc",
+          "text": "Já é o bastante. Dê meia-volta: a estrada de volta é sua pista. Mantenha o acelerador fundo e não alivie.",
+          "seconds": 7
+        },
+        {
+          "type": "jump",
+          "to": "1955",
+          "text": "Dê meia-volta e alcance 88 mph"
+        }
+      ]
+    },
+    {
+      "id": "m2_stranded",
+      "title": "Preso em 1955",
+      "briefing": "O reator está vazio e você está a trinta anos de casa.",
+      "start": {
+        "pos": [
+          -686.5,
+          3.0,
+          0.3
+        ],
+        "yaw": 0,
+        "onFoot": true,
+        "car": {
+          "pos": [
+            -691.0,
+            -0.6,
+            0.3
+          ],
+          "yaw": 14
+        },
+        "era": "1955",
+        "look": "1955_golden"
+      },
+      "objectives": [
+        {
+          "type": "dialog",
+          "speaker": "Marty",
+          "text": "1955?! E o reator está vazio. Só uma pessoa pode me ajudar agora. Preciso achar o Doc... o Doc de 1955.",
+          "seconds": 8
+        },
+        {
+          "type": "goto",
+          "pos": [
+            -160,
+            60,
+            0
+          ],
+          "radius": 16,
+          "era": "1955",
+          "text": "Encontre a garagem do Doc no noroeste da cidade"
+        },
+        {
+          "type": "dialog",
+          "speaker": "Doc",
+          "text": "Céus! Uma máquina do tempo que eu invento? Um vírgula vinte e um gigawatts! A única coisa capaz de gerar essa energia é um raio.",
+          "seconds": 9
+        },
+        {
+          "type": "dialog",
+          "speaker": "Doc",
+          "text": "O salto soltou metade da fiação. Cinco peças caíram pela praça. Traga todas de volta e eu consigo consertá-la.",
+          "seconds": 8
+        },
+        {
+          "type": "collect",
+          "items": [
+            [
+              -52,
+              -34,
+              1.2
+            ],
+            [
+              52,
+              -60,
+              1.2
+            ],
+            [
+              70,
+              -2,
+              1.2
+            ],
+            [
+              -78,
+              -2,
+              1.2
+            ],
+            [
+              0,
+              104,
+              1.2
+            ]
+          ],
+          "text": "Recolha as peças nas ruas ao redor da praça"
+        },
+        {
+          "type": "goto",
+          "pos": [
+            -160,
+            60,
+            0
+          ],
+          "radius": 16,
+          "text": "Leve as peças de volta à garagem do Doc"
+        },
+        {
+          "type": "dialog",
+          "speaker": "Doc",
+          "text": "Olhe este panfleto. O raio vai atingir a torre do relógio exatamente às 22h04 deste sábado. Podemos canalizá-lo direto para o capacitor de fluxo!",
+          "seconds": 9
+        }
+      ],
+      "cast": [
+        {
+          "art": "Ped55_Man2",
+          "name": "Walt",
+          "pos": [
+            -693.5,
+            6.6,
+            0.0
+          ],
+          "yaw": 300,
+          "from": 0,
+          "to": 1
+        },
+        {
+          "art": "Ped55_Woman",
+          "name": "Ellie",
+          "pos": [
+            -691.5,
+            7.4,
+            0.0
+          ],
+          "yaw": 285,
+          "from": 0,
+          "to": 1
+        }
+      ]
+    },
+    {
+      "id": "m3_dance",
+      "title": "Encanto Sob o Mar",
+      "briefing": "Naquela noite. O baile começou, Walt ainda está em casa e sua fotografia está sumindo.",
+      "photo": {
+        "seconds": 90,
+        "start": 90
+      },
+      "start": {
+        "pos": [
+          70.6,
+          -8.9,
+          0.3
+        ],
+        "yaw": 90,
+        "onFoot": true,
+        "car": {
+          "pos": [
+            75.0,
+            -4.8,
+            0.3
+          ],
+          "yaw": 180
+        },
+        "era": "1955",
+        "look": "1955_evening"
+      },
+      "passenger": {
+        "art": "Walt55",
+        "name": "Walt",
+        "from": 3,
+        "to": 4,
+        "wait": [
+          166.0,
+          43.5,
+          0.15
+        ],
+        "waitYaw": 88
+      },
+      "cast": [
+        {
+          "art": "Ellie55",
+          "name": "Ellie",
+          "pos": [
+            167.6,
+            72.0,
+            0.15
+          ],
+          "yaw": 180,
+          "from": 5,
+          "to": 6
+        },
+        {
+          "art": "Ellie55",
+          "name": "Ellie",
+          "pos": [
+            167.4,
+            49.6,
+            0.15
+          ],
+          "yaw": 160,
+          "from": 7,
+          "to": 9
+        },
+        {
+          "art": "Walt55",
+          "name": "Walt",
+          "pos": [
+            167.4,
+            54.6,
+            0.15
+          ],
+          "yaw": 200,
+          "from": 7,
+          "to": 9
+        }
+      ],
+      "objectives": [
+        {
+          "type": "dialog",
+          "speaker": "Marty",
+          "seconds": 5,
+          "voice": "m3d_marty_drive",
+          "text": "O Walt vai amarelar. Vou dirigir até lá e buscá-lo eu mesmo."
+        },
+        {
+          "type": "car",
+          "text": "Entre no carro [E]"
+        },
+        {
+          "type": "pickup",
+          "pos": [
+            -231.5,
+            2.6,
+            0
+          ],
+          "radius": 9,
+          "recover": 30,
+          "person": {
+            "art": "Walt55",
+            "name": "Walt",
+            "pos": [
+              -231.5,
+              9.2,
+              0.15
+            ]
+          },
+          "retry": {
+            "pos": [
+              60.0,
+              2.4,
+              0.3
+            ],
+            "yaw": 180,
+            "era": "1955",
+            "look": "1955_evening"
+          },
+          "text": "Pegue o Walt na porta de casa, no fim oeste da Rua Principal"
+        },
+        {
+          "type": "dialog",
+          "speaker": "Walt",
+          "seconds": 5,
+          "voice": "m3d_walt_whatif",
+          "text": "E se ela rir de mim? E se aqueles caras do café estiverem lá?"
+        },
+        {
+          "type": "goto",
+          "pos": [
+            160.0,
+            38.0,
+            0
+          ],
+          "radius": 10,
+          "era": "1955",
+          "recover": 45,
+          "retry": {
+            "pos": [
+              -222.0,
+              2.6,
+              0.3
+            ],
+            "yaw": 0,
+            "era": "1955",
+            "look": "1955_evening"
+          },
+          "text": "Leve o Walt ao Colégio de Hill Valley antes da última dança"
+        },
+        {
+          "type": "dialog",
+          "speaker": "Walt",
+          "seconds": 5,
+          "voice": "m3d_walt_cornered",
+          "text": "Lá está a Ellie. Aqueles caras a encurralaram. Não consigo ir até lá!"
+        },
+        {
+          "type": "lure",
+          "pos": [
+            165.6,
+            72.0,
+            0
+          ],
+          "chasers": [
+            "Ped55_Man",
+            "Ped55_Man2",
+            "Ped55_Man"
+          ],
+          "chaserSpeed": 4.0,
+          "taunts": [
+            "Você não pode correr para sempre, pivete!",
+            "Corta ele na esquina!",
+            "Você morreu, boia!"
+          ],
+          "notice": 14,
+          "seconds": 20,
+          "recover": 40,
+          "person": {
+            "name": "Ellie"
+          },
+          "shout": {
+            "speaker": "Valentão",
+            "voice": "m3d_bully_shout",
+            "text": "Ei, é o garoto da boia! Pega ele!"
+          },
+          "retry": {
+            "pos": [
+              157.5,
+              36.0,
+              0.3
+            ],
+            "yaw": 90,
+            "onFoot": true,
+            "car": {
+              "pos": [
+                162.0,
+                30.0,
+                0.3
+              ],
+              "yaw": 90
+            },
+            "era": "1955",
+            "look": "1955_evening"
+          },
+          "text": "Saia [E] e vá até os amigos do valentão em volta da Ellie, depois corra"
+        },
+        {
+          "type": "dialog",
+          "speaker": "Marty",
+          "seconds": 5,
+          "voice": "m3d_marty_find",
+          "text": "A Ellie derrubou o buquê quando a encurralaram, e o Walt perdeu a gravata. Melhor achar os dois."
+        },
+        {
+          "type": "collect",
+          "items": [
+            [
+              164.6,
+              86.0,
+              1.0
+            ],
+            [
+              162.8,
+              101.0,
+              1.0
+            ]
+          ],
+          "names": [
+            "buquê de pulso",
+            "gravata emprestada"
+          ],
+          "recover": 20,
+          "retry": {
+            "pos": [
+              157.5,
+              40.0,
+              0.3
+            ],
+            "yaw": 90,
+            "onFoot": true,
+            "car": {
+              "pos": [
+                162.0,
+                30.0,
+                0.3
+              ],
+              "yaw": 90
+            },
+            "era": "1955",
+            "look": "1955_evening"
+          },
+          "text": "Ache o buquê da Ellie e a gravata emprestada do Walt na 4ª Avenida, perto do colégio"
+        },
+        {
+          "type": "goto",
+          "pos": [
+            166.6,
+            52.0,
+            0
+          ],
+          "radius": 5,
+          "retry": {
+            "pos": [
+              160.5,
+              98.0,
+              0.3
+            ],
+            "yaw": 270,
+            "onFoot": true,
+            "car": {
+              "pos": [
+                162.0,
+                30.0,
+                0.3
+              ],
+              "yaw": 90
+            },
+            "era": "1955",
+            "look": "1955_evening"
+          },
+          "text": "Leve os dois para o Walt e a Ellie na porta do ginásio"
+        }
+      ]
+    },
+    {
+      "id": "m4_lightning",
+      "title": "A Corrida do Raio",
+      "briefing": "22h04. Um raio. Uma chance de voltar para casa.",
+      "start": {
+        "pos": [
+          0,
+          -2,
+          0.3
+        ],
+        "yaw": 180,
+        "era": "1955",
+        "look": "1955_storm"
+      },
+      "objectives": [
+        {
+          "type": "dialog",
+          "speaker": "Doc",
+          "text": "Passei um cabo da torre do relógio atravessando a rua. Quando o raio cair, você tem que passar embaixo dele a exatamente oitenta e oito milhas por hora. Nem antes. Nem depois.",
+          "seconds": 9,
+          "voice": "m4_lightning_01"
+        },
+        {
+          "type": "circuits",
+          "dest": "1985",
+          "text": "Ajuste os circuitos de tempo para 1985 [T, depois Q / E]"
+        },
+        {
+          "type": "goto",
+          "pos": [
+            -700,
+            -2,
+            0
+          ],
+          "radius": 22,
+          "text": "Dirija até a linha branca de partida no Condomínio Lyon e dê meia-volta"
+        },
+        {
+          "type": "dialog",
+          "speaker": "Doc",
+          "text": "A corrida leva uns vinte segundos. Olhe a contagem, comece quando marcar vinte e, aconteça o que acontecer, não freie.",
+          "seconds": 8,
+          "voice": "m4_lightning_04"
+        },
+        {
+          "type": "lightning",
+          "pos": [
+            0,
+            0,
+            5.5
+          ],
+          "to": "1985",
+          "seconds": 30,
+          "text": "Passe sob o cabo a 88 mph no instante do raio. Comece a corrida em 0:20",
+          "retry": {
+            "pos": [
+              -700,
+              -2,
+              0.3
+            ],
+            "yaw": 0,
+            "era": "1955",
+            "look": "1955_storm"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m5_future",
+      "title": "Para Onde Vamos",
+      "briefing": "O Doc voltou do futuro e precisa da sua ajuda.",
+      "start": {
+        "pos": [
+          6.0,
+          -2.4,
+          0.3
+        ],
+        "yaw": 0,
+        "era": "1985",
+        "look": "1985_dusk"
+      },
+      "objectives": [
+        {
+          "type": "dialog",
+          "speaker": "Doc",
+          "text": "Marty! Você tem que voltar comigo. De volta para o futuro! São seus filhos, Marty. Temos que fazer algo sobre seus filhos. Encontre-me no shopping.",
+          "seconds": 9
+        },
+        {
+          "type": "goto",
+          "pos": [
+            400,
+            -140,
+            0
+          ],
+          "radius": 20,
+          "era": "1985",
+          "text": "Encontre o Doc no Shopping Twin Pines"
+        },
+        {
+          "type": "grant",
+          "fuel": 2
+        },
+        {
+          "type": "dialog",
+          "speaker": "Doc",
+          "text": "Instalei um reator de fusão: agora ela roda com lixo doméstico. Há duas cargas. Ajuste os circuitos para 21 de outubro de 2015.",
+          "seconds": 8
+        },
+        {
+          "type": "circuits",
+          "dest": "2015",
+          "text": "Ajuste os circuitos de tempo para 2015"
+        },
+        {
+          "type": "jump",
+          "to": "2015",
+          "text": "Alcance 88 mph. A estrada do shopping e a Rua Principal são longas o bastante"
+        },
+        {
+          "type": "dialog",
+          "speaker": "Doc",
+          "text": "Bem-vindo ao futuro. Primeiro o básico: a conversão para voo. Há um posto de serviço na Rua Principal, a leste da praça.",
+          "seconds": 8
+        },
+        {
+          "type": "goto",
+          "pos": [
+            205,
+            -3,
+            0
+          ],
+          "radius": 16,
+          "era": "2015",
+          "text": "Dirija até o posto de conversão para voo na Rua Principal"
+        },
+        {
+          "type": "grant",
+          "hover": true
+        },
+        {
+          "type": "dialog",
+          "speaker": "Doc",
+          "text": "Estradas? Para onde vamos, não precisamos de estradas. Aperte H para decolar e segure Shift para subir.",
+          "seconds": 7
+        },
+        {
+          "type": "hover",
+          "altitude": 10,
+          "text": "Decole [H] e suba acima de 10 metros [Shift]"
+        }
+      ],
+      "cast": [
+        {
+          "art": "Inventor",
+          "name": "Doc",
+          "pos": [
+            9.5,
+            9.6,
+            0.15
+          ],
+          "yaw": 250,
+          "from": 0,
+          "to": 1
+        },
+        {
+          "art": "Ped85_Man",
+          "name": "Walt",
+          "pos": [
+            2.0,
+            10.2,
+            0.15
+          ],
+          "yaw": 280,
+          "from": 0,
+          "to": 1
+        },
+        {
+          "art": "Ped85_Woman",
+          "name": "Ellie",
+          "pos": [
+            4.0,
+            10.6,
+            0.15
+          ],
+          "yaw": 275,
+          "from": 0,
+          "to": 1
+        }
+      ]
+    },
+    {
+      "id": "m6_hover",
+      "title": "Encrenca no Ar",
+      "briefing": "A conversão para voo leva uma hora. Fique longe de encrenca. Em 2015 isso é mais difícil do que parece.",
+      "start": {
+        "pos": [
+          68.8,
+          -9.4,
+          0.3
+        ],
+        "yaw": 180,
+        "onFoot": true,
+        "car": {
+          "pos": [
+            205.0,
+            -5.6,
+            0.3
+          ],
+          "yaw": 0
+        },
+        "era": "2015",
+        "look": "2015_day"
+      },
+      "objectives": [
+        {
+          "type": "dialog",
+          "speaker": "Doc",
+          "seconds": 8,
+          "text": "A conversão leva uma hora. Espere do lado de fora do Café Anos 80, não fale com ninguém e, faça o que fizer, não chame atenção."
+        },
+        {
+          "type": "dialog",
+          "speaker": "Chefe da gangue",
+          "seconds": 6,
+          "text": "Ei! Você! Ninguém vira as costas para mim. Peguem as pranchas, todo mundo. Pega ele!"
+        },
+        {
+          "type": "ride",
+          "chase": true,
+          "items": [
+            [
+              58.0,
+              -4.6
+            ],
+            [
+              12.0,
+              -4.6
+            ],
+            [
+              5.0,
+              -10.5
+            ],
+            [
+              -4.88,
+              -17.48
+            ],
+            [
+              -13.62,
+              -19.3
+            ],
+            [
+              -20.28,
+              -24.94
+            ],
+            [
+              -22.4,
+              -31.53
+            ],
+            [
+              -22.6,
+              -40.53
+            ],
+            [
+              -22.17,
+              -49.5
+            ],
+            [
+              -19.48,
+              -57.79
+            ],
+            [
+              -12.18,
+              -62.69
+            ],
+            [
+              -3.22,
+              -63.39
+            ],
+            [
+              5.78,
+              -63.27
+            ],
+            [
+              14.64,
+              -61.91
+            ],
+            [
+              22.8,
+              -58.25
+            ],
+            [
+              28.65,
+              -51.57
+            ],
+            [
+              31.32,
+              -43.06
+            ],
+            [
+              31.28,
+              -34.09
+            ],
+            [
+              28.73,
+              -25.55
+            ],
+            [
+              21.76,
+              -20.15
+            ],
+            [
+              13.09,
+              -17.89
+            ],
+            [
+              2.06,
+              -14.84
+            ]
+          ],
+          "radius": 4.5,
+          "begin": {
+            "pos": [
+              63.5,
+              -9.2,
+              0.3
+            ],
+            "yaw": 140,
+            "onFoot": true,
+            "board": true,
+            "glide": 7.5,
+            "chased": true,
+            "car": {
+              "pos": [
+                205.0,
+                -5.6,
+                0.3
+              ],
+              "yaw": 0
+            },
+            "era": "2015",
+            "look": "2015_day"
+          },
+          "retry": {
+            "pos": [
+              62.0,
+              -5.6,
+              0.3
+            ],
+            "yaw": 180,
+            "onFoot": true,
+            "board": true,
+            "glide": 5.0,
+            "car": {
+              "pos": [
+                205.0,
+                -5.6,
+                0.3
+              ],
+              "yaw": 0
+            },
+            "era": "2015",
+            "look": "2015_day"
+          },
+          "text": "Fuja da gangue: ande pelo parque e contorne o lago  [Shift = empurrar mais forte]"
+        },
+        {
+          "type": "tow",
+          "chase": true,
+          "retry": {
+            "pos": [
+              2.06,
+              -14.84,
+              0.3
+            ],
+            "yaw": 90,
+            "onFoot": true,
+            "board": true,
+            "car": {
+              "pos": [
+                205.0,
+                -5.6,
+                0.3
+              ],
+              "yaw": 0
+            },
+            "era": "2015",
+            "look": "2015_day"
+          },
+          "text": "Segure a traseira do táxi voador na Rua Principal  [F]"
+        },
+        {
+          "type": "bail",
+          "pos": [
+            2.06,
+            -40.96,
+            0
+          ],
+          "radius": 15,
+          "seconds": 3.5,
+          "retry": {
+            "pos": [
+              2.06,
+              -14.84,
+              0.3
+            ],
+            "yaw": 270,
+            "onFoot": true,
+            "board": true,
+            "car": {
+              "pos": [
+                205.0,
+                -5.6,
+                0.3
+              ],
+              "yaw": 0
+            },
+            "era": "2015",
+            "look": "2015_day"
+          },
+          "text": "Atravesse o lago para despistá-los"
+        },
+        {
+          "type": "dialog",
+          "speaker": "Marty",
+          "seconds": 6,
+          "voice": "m6_hover_06",
+          "text": "Direto pela frente do fórum. Acho que é a minha deixa para sair."
+        },
+        {
+          "type": "set_look",
+          "look": "2015_night",
+          "blend": 9,
+          "fade": true,
+          "begin": {
+            "pos": [
+              -1.5,
+              -17.6,
+              0.3
+            ],
+            "yaw": 75,
+            "onFoot": true
+          },
+          "boardAt": [
+            2.4,
+            -17.0,
+            0.45
+          ]
+        },
+        {
+          "type": "board",
+          "text": "Pegue seu aeropatim de volta"
+        },
+        {
+          "type": "dialog",
+          "speaker": "Doc",
+          "seconds": 7,
+          "voice": "m6_hover_09",
+          "text": "Marty! A conversão terminou e está escurecendo. Volte para o carro e fique longe da via aérea: o trânsito lá em cima é um massacre."
+        },
+        {
+          "type": "ride",
+          "items": [
+            [
+              2.06,
+              -14.84
+            ],
+            [
+              2.06,
+              -3.6
+            ],
+            [
+              -20,
+              -2.6
+            ],
+            [
+              -80,
+              -2.6
+            ],
+            [
+              -140,
+              -2.6
+            ],
+            [
+              -160,
+              -3.5
+            ],
+            [
+              -161.7,
+              -20
+            ],
+            [
+              -161.7,
+              -70
+            ],
+            [
+              -160.5,
+              -86.5
+            ],
+            [
+              -140,
+              -88.1
+            ],
+            [
+              -60,
+              -88.1
+            ],
+            [
+              20,
+              -88.1
+            ],
+            [
+              100,
+              -88.1
+            ],
+            [
+              140,
+              -88.1
+            ],
+            [
+              160.5,
+              -86.5
+            ],
+            [
+              161.7,
+              -70
+            ],
+            [
+              161.7,
+              -20
+            ],
+            [
+              163.5,
+              -3.5
+            ],
+            [
+              185,
+              -2.6
+            ],
+            [
+              194,
+              -1.6
+            ]
+          ],
+          "radius": 6.5,
+          "retry": {
+            "pos": [
+              2.06,
+              -14.84,
+              0.3
+            ],
+            "yaw": 180,
+            "onFoot": true,
+            "board": true,
+            "car": {
+              "pos": [
+                205.0,
+                -5.6,
+                0.3
+              ],
+              "yaw": 0
+            },
+            "era": "2015",
+            "look": "2015_night"
+          },
+          "text": "Volte ao carro pelas ruas"
+        },
+        {
+          "type": "goto",
+          "pos": [
+            203.0,
+            -1.6,
+            0
+          ],
+          "radius": 8,
+          "era": "2015",
+          "text": "Chegue à máquina do tempo"
+        },
+        {
+          "type": "dialog",
+          "speaker": "Doc",
+          "seconds": 7,
+          "voice": "m6_hover_12",
+          "text": "Um aeropatim? E o fórum? Deixa pra lá. Fique com a prancha, pode ser útil. Temos um problema maior."
+        }
+      ]
+    },
+    {
+      "id": "m6_almanac",
+      "title": "O Almanaque",
+      "briefing": "Um almanaque de esportes do futuro pode desfazer toda a linha do tempo.",
+      "start": {
+        "pos": [
+          205,
+          -3,
+          0.3
+        ],
+        "yaw": 180,
+        "era": "2015",
+        "look": "2015_sunset"
+      },
+      "objectives": [
+        {
+          "type": "grant",
+          "hover": true
+        },
+        {
+          "type": "dialog",
+          "speaker": "Doc",
+          "text": "Céus! Um drone de entrega está levando um almanaque de esportes pela via aérea, página por página. Se chegar ao passado, a história está perdida. Pegue todas as páginas!",
+          "seconds": 9
+        },
+        {
+          "type": "collect",
+          "seconds": 170,
+          "items": [
+            [
+              150,
+              0,
+              16
+            ],
+            [
+              60,
+              0,
+              22
+            ],
+            [
+              0,
+              -44,
+              14
+            ],
+            [
+              -52,
+              -60,
+              20
+            ],
+            [
+              -110,
+              0,
+              24
+            ],
+            [
+              -58,
+              26,
+              20
+            ],
+            [
+              0,
+              30,
+              30
+            ],
+            [
+              52,
+              60,
+              20
+            ],
+            [
+              110,
+              -86,
+              16
+            ]
+          ],
+          "text": "Voe por todas as páginas do almanaque sobre a cidade",
+          "retry": {
+            "pos": [
+              205,
+              -3,
+              0.3
+            ],
+            "yaw": 180,
+            "era": "2015",
+            "look": "2015_sunset"
+          }
+        },
+        {
+          "type": "dialog",
+          "speaker": "Doc",
+          "text": "Você pegou todas! Queime isso. O futuro está a salvo, o que significa que é hora de você ir para casa. Ajuste os circuitos para 1985.",
+          "seconds": 8
+        },
+        {
+          "type": "circuits",
+          "dest": "1985",
+          "text": "Ajuste os circuitos de tempo para 1985"
+        },
+        {
+          "type": "jump",
+          "to": "1985",
+          "text": "Alcance 88 mph, na estrada ou no ar"
+        }
+      ]
+    }
+  ]
+}

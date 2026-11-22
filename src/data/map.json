@@ -1,0 +1,173 @@
+{
+  "_comment": "Written by Tools/map/make_map.py. window: the plan metres the map textures (/Game/PD/UI/T_Map_<year>) cover, x0 at the left edge and y1 (north) at the top. places: what the map labels; eras 1 = 1955, 2 = 1985, 4 = 2015; rank 1 shows on both views, 2 and 3 only on the town view.",
+  "window": {
+    "x0": -1600.0,
+    "x1": 680.0,
+    "y0": -590.0,
+    "y1": 550.0
+  },
+  "places": [
+    {
+      "name": "FÓRUM",
+      "at": [
+        0,
+        34
+      ],
+      "eras": 7,
+      "rank": 1
+    },
+    {
+      "name": "PÇA. DO FÓRUM",
+      "at": [
+        0,
+        -50
+      ],
+      "eras": 7,
+      "rank": 1
+    },
+    {
+      "name": "CAFÉ DO LOU",
+      "at": [
+        100,
+        -34
+      ],
+      "eras": 1,
+      "rank": 2
+    },
+    {
+      "name": "AERÓBICA",
+      "at": [
+        104,
+        -34
+      ],
+      "eras": 2,
+      "rank": 2
+    },
+    {
+      "name": "CAFÉ 80'S",
+      "at": [
+        98,
+        -34
+      ],
+      "eras": 4,
+      "rank": 2
+    },
+    {
+      "name": "CINEMA",
+      "at": [
+        84,
+        72
+      ],
+      "eras": 7,
+      "rank": 2
+    },
+    {
+      "name": "COLÉGIO",
+      "at": [
+        200,
+        62
+      ],
+      "eras": 7,
+      "rank": 2
+    },
+    {
+      "name": "POSTO DE GÁS",
+      "at": [
+        214,
+        -40
+      ],
+      "eras": 7,
+      "rank": 2
+    },
+    {
+      "name": "BANCO",
+      "at": [
+        -139,
+        24
+      ],
+      "eras": 7,
+      "rank": 3
+    },
+    {
+      "name": "GARAGEM",
+      "at": [
+        -176,
+        62
+      ],
+      "eras": 7,
+      "rank": 3
+    },
+    {
+      "name": "CAIXA D'ÁGUA",
+      "at": [
+        -292,
+        62
+      ],
+      "eras": 7,
+      "rank": 3
+    },
+    {
+      "name": "SHOPPING TWIN PINES",
+      "at": [
+        470,
+        -140
+      ],
+      "eras": 6,
+      "rank": 1
+    },
+    {
+      "name": "FAZENDA PEABODY",
+      "at": [
+        400,
+        -130
+      ],
+      "eras": 1,
+      "rank": 1
+    },
+    {
+      "name": "IGREJA",
+      "at": [
+        332,
+        385
+      ],
+      "eras": 3,
+      "rank": 3
+    },
+    {
+      "name": "CONDOMÍNIO LYON",
+      "at": [
+        -700,
+        40
+      ],
+      "eras": 7,
+      "rank": 1
+    },
+    {
+      "name": "SILOS DE GRÃOS",
+      "at": [
+        -1123,
+        34
+      ],
+      "eras": 7,
+      "rank": 2
+    },
+    {
+      "name": "PARADA DE TREM",
+      "at": [
+        -1087,
+        -60
+      ],
+      "eras": 3,
+      "rank": 2
+    },
+    {
+      "name": "ZONA NORTE",
+      "at": [
+        105,
+        205
+      ],
+      "eras": 3,
+      "rank": 2
+    }
+  ]
+}

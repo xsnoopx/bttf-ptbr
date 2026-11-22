@@ -1,0 +1,161 @@
+{
+  "_comment": "Road centre lines for the QA bot's route finder (and anything else that needs to follow roads). Plan metres: +X east, +Y north. 'lane' is how far right of the centre line to drive, 'mph' the cruising speed. Roads are joined wherever they cross or touch. Source: Tools/blender_world/plan.py.",
+  "roads": [
+    {
+      "name": "Estrada do Campo",
+      "a": [
+        -1500,
+        0
+      ],
+      "b": [
+        -250,
+        0
+      ],
+      "lane": 2.0,
+      "mph": 70
+    },
+    {
+      "name": "Rua Principal",
+      "a": [
+        -250,
+        0
+      ],
+      "b": [
+        300,
+        0
+      ],
+      "lane": 2.5,
+      "mph": 38
+    },
+    {
+      "name": "Rua Sul",
+      "a": [
+        -250,
+        -86
+      ],
+      "b": [
+        300,
+        -86
+      ],
+      "lane": 1.7,
+      "mph": 32
+    },
+    {
+      "name": "Rua Norte",
+      "a": [
+        -250,
+        104
+      ],
+      "b": [
+        300,
+        104
+      ],
+      "lane": 1.7,
+      "mph": 32
+    },
+    {
+      "name": "Estrada Oeste",
+      "a": [
+        -250,
+        -86
+      ],
+      "b": [
+        -250,
+        104
+      ],
+      "lane": 1.7,
+      "mph": 30
+    },
+    {
+      "name": "Avenida 2",
+      "a": [
+        -160,
+        -86
+      ],
+      "b": [
+        -160,
+        104
+      ],
+      "lane": 1.7,
+      "mph": 30
+    },
+    {
+      "name": "Avenida Oeste",
+      "a": [
+        -52,
+        -86
+      ],
+      "b": [
+        -52,
+        104
+      ],
+      "lane": 1.7,
+      "mph": 30
+    },
+    {
+      "name": "Avenida Leste",
+      "a": [
+        52,
+        -86
+      ],
+      "b": [
+        52,
+        104
+      ],
+      "lane": 1.7,
+      "mph": 30
+    },
+    {
+      "name": "Avenida 4",
+      "a": [
+        160,
+        -86
+      ],
+      "b": [
+        160,
+        104
+      ],
+      "lane": 1.7,
+      "mph": 30
+    },
+    {
+      "name": "Estrada do Shopping",
+      "a": [
+        300,
+        -255
+      ],
+      "b": [
+        300,
+        104
+      ],
+      "lane": 1.7,
+      "mph": 35
+    },
+    {
+      "name": "Via do Estacionamento",
+      "a": [
+        300,
+        -140
+      ],
+      "b": [
+        510,
+        -140
+      ],
+      "lane": 2.0,
+      "mph": 22
+    },
+    {
+      "name": "Condomínio Lyon",
+      "a": [
+        -700,
+        0
+      ],
+      "b": [
+        -700,
+        88
+      ],
+      "lane": 1.0,
+      "mph": 18
+    }
+  ]
+}

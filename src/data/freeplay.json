@@ -1,0 +1,266 @@
+{
+  "_comment": "Free play (Docs/FREE_PLAY_PLAN.md): the cards of the title menu's 'Free play' pages and what each choice sets up. 'years' are the cards of the first page, in order; each lists the cards of its second page. 'cards' are what you can do: title and one line drawn on the card, 'hud' the line under FREE PLAY in the game (keys in [brackets] are shown as the buttons of the device in use). 'starts' has, for a year and a card, a 'start' in the same shape as a mission's start in missions.json (plan metres, yaw anticlockwise from east, 'onFoot', 'board', 'car'), the reactor's 'fuel', whether the 'hover' conversion is fitted, 'fly' (already in the air, 'altitude' metres) and the sentence shown under the cards ('about'). 'missions' gives each story mission the car and board it has when the story reaches it, and its one line in the mission list; a mission belongs to the year of its own start. Free play never writes the save file.",
+  "years": [
+    {
+      "era": "1955",
+      "title": "1955",
+      "line": "Rua Principal ao anoitecer. O baile está rolando no colégio.",
+      "about": "Hill Valley, novembro de 1955: toldos listrados, lampiões redondos e o relógio do fórum ainda funcionando.",
+      "picture": "T_Card_1955.png",
+      "cards": [
+        "joyride",
+        "hoverboard",
+        "missions",
+        "story"
+      ]
+    },
+    {
+      "era": "1985",
+      "title": "1985",
+      "line": "Trinta anos depois: o shopping, ruas molhadas e luzes de rua.",
+      "about": "Hill Valley, outubro de 1985: o Shopping Twin Pines, a Rua Principal decadente e a longa estrada até o Condomínio Lyon.",
+      "picture": "T_Card_1985.png",
+      "cards": [
+        "joyride",
+        "hoverboard",
+        "missions",
+        "story"
+      ]
+    },
+    {
+      "era": "2015",
+      "title": "2015",
+      "line": "Vias aéreas, aeropatins e um lago onde era a praça.",
+      "about": "Hill Valley, outubro de 2015: torres em volta da cidade antiga, trânsito voador e a conversão para voo.",
+      "picture": "T_Card_2015.png",
+      "cards": [
+        "joyride",
+        "fly",
+        "hoverboard",
+        "missions",
+        "story"
+      ]
+    }
+  ],
+  "cards": {
+    "joyride": {
+      "title": "Passeio",
+      "line": "Dirija por aí. Nada a fazer além de dirigir.",
+      "picture": "T_Card_Joyride.png",
+      "hud": "Dirija por aí. Circuitos de tempo [T], escolha um ano [Q / E] e chegue a 88."
+    },
+    "fly": {
+      "title": "Voar",
+      "line": "Conversão para voo instalada. Decole sobre a cidade.",
+      "picture": "T_Card_Fly.png",
+      "hud": "Voe por aí. Suba [Shift], desça [Ctrl], pouse ou decole [H]."
+    },
+    "hoverboard": {
+      "title": "Aeropatim",
+      "line": "Ande de prancha pela cidade inteira.",
+      "picture": "T_Card_Hoverboard.png",
+      "hud": "Ande por aí. Empurre mais forte [Shift], prancha on/off [B]. O carro está na guia."
+    },
+    "missions": {
+      "title": "Missões",
+      "line": "Jogue uma missão deste ano.",
+      "picture": "T_Card_Missions.png",
+      "hud": ""
+    },
+    "story": {
+      "title": "História",
+      "line": "Continue a aventura.",
+      "picture": "T_Card_Story.png",
+      "hud": ""
+    }
+  },
+  "starts": {
+    "1955": {
+      "joyride": {
+        "start": {
+          "pos": [
+            0,
+            -2,
+            0.3
+          ],
+          "yaw": 180,
+          "era": "1955",
+          "look": "1955_golden"
+        },
+        "fuel": 99,
+        "hover": false,
+        "about": "O carro como era em 1955: sobre as rodas. Você começa na guia do fórum, na Rua Principal."
+      },
+      "hoverboard": {
+        "start": {
+          "pos": [
+            70.6,
+            -8.9,
+            0.3
+          ],
+          "yaw": 180,
+          "onFoot": true,
+          "board": true,
+          "car": {
+            "pos": [
+              75.0,
+              -4.8,
+              0.3
+            ],
+            "yaw": 180
+          },
+          "era": "1955",
+          "look": "1955_golden"
+        },
+        "fuel": 99,
+        "hover": false,
+        "about": "Sua própria prancha, trinta anos antes. Você começa em frente ao Café do Lou, com o carro na guia."
+      }
+    },
+    "1985": {
+      "joyride": {
+        "start": {
+          "pos": [
+            400,
+            -140,
+            0.3
+          ],
+          "yaw": 180,
+          "era": "1985",
+          "look": "1985_dusk"
+        },
+        "fuel": 99,
+        "hover": false,
+        "about": "O carro como era em 1985: sobre as rodas. Você começa no estacionamento do Shopping Twin Pines."
+      },
+      "hoverboard": {
+        "start": {
+          "pos": [
+            70.6,
+            -8.9,
+            0.3
+          ],
+          "yaw": 180,
+          "onFoot": true,
+          "board": true,
+          "car": {
+            "pos": [
+              75.0,
+              -4.8,
+              0.3
+            ],
+            "yaw": 180
+          },
+          "era": "1985",
+          "look": "1985_dusk"
+        },
+        "fuel": 99,
+        "hover": false,
+        "about": "Sua própria prancha em 1985. Você começa na Rua Principal, junto à praça, com o carro na guia."
+      }
+    },
+    "2015": {
+      "joyride": {
+        "start": {
+          "pos": [
+            205,
+            -3,
+            0.3
+          ],
+          "yaw": 180,
+          "era": "2015",
+          "look": "2015_sunset"
+        },
+        "fuel": 99,
+        "hover": true,
+        "about": "O carro como é em 2015, com a conversão para voo. Você começa na Rua Principal, na pista."
+      },
+      "fly": {
+        "start": {
+          "pos": [
+            205,
+            -3,
+            0.3
+          ],
+          "yaw": 180,
+          "era": "2015",
+          "look": "2015_sunset"
+        },
+        "fuel": 99,
+        "hover": true,
+        "fly": true,
+        "altitude": 25,
+        "about": "Conversão para voo instalada. Você começa no ar sobre a Rua Principal, subindo para a via aérea."
+      },
+      "hoverboard": {
+        "start": {
+          "pos": [
+            68.8,
+            -9.4,
+            0.3
+          ],
+          "yaw": 180,
+          "onFoot": true,
+          "board": true,
+          "car": {
+            "pos": [
+              205.0,
+              -5.6,
+              0.3
+            ],
+            "yaw": 0
+          },
+          "era": "2015",
+          "look": "2015_day"
+        },
+        "fuel": 99,
+        "hover": true,
+        "about": "O parque do lago, as faixas e nenhuma gangue. Você começa em frente ao Café Anos 80."
+      }
+    }
+  },
+  "missions": {
+    "m1_experiment": {
+      "fuel": 0,
+      "hover": false,
+      "board": false,
+      "line": "Aprenda os circuitos de tempo, vá até a linha de partida e chegue a 88."
+    },
+    "m2_stranded": {
+      "fuel": 0,
+      "hover": false,
+      "board": false,
+      "line": "Ache a garagem do Doc e recolha cinco peças nas ruas ao redor da praça."
+    },
+    "m3_dance": {
+      "fuel": 0,
+      "hover": false,
+      "board": false,
+      "line": "Leve o Walt ao baile e afaste os amigos do valentão antes que a fotografia suma."
+    },
+    "m4_lightning": {
+      "fuel": 0,
+      "hover": false,
+      "board": false,
+      "line": "Passe sob o cabo da torre do relógio a 88 mph no instante do raio."
+    },
+    "m5_future": {
+      "fuel": 0,
+      "hover": false,
+      "board": false,
+      "line": "Salte para 2015, faça a conversão para voo e decole pela primeira vez."
+    },
+    "m6_hover": {
+      "fuel": 1,
+      "hover": true,
+      "board": false,
+      "line": "Fuja da gangue num aeropatim emprestado: contorne o lago e saia sobre a água."
+    },
+    "m6_almanac": {
+      "fuel": 1,
+      "hover": true,
+      "board": true,
+      "line": "Voe por todas as páginas do almanaque contra o tempo e depois salte para casa."
+    }
+  }
+}

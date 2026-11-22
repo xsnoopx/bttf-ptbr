@@ -1,0 +1,360 @@
+{
+  "_comment": "Spoken lines, written by Tools/assetgen/voices/make_voices.py. story: key (mission id + objective index) and the sound for each dialog line. barks: what people in the street say (by era and sex) and what the hero answers.",
+  "story": [
+    {
+      "key": "m1_experiment_00",
+      "sound": "VO_m1_experiment_00",
+      "seconds": 11.61
+    },
+    {
+      "key": "m1_experiment_02",
+      "sound": "VO_m1_experiment_02",
+      "seconds": 8.63
+    },
+    {
+      "key": "m1_experiment_05",
+      "sound": "VO_m1_experiment_05",
+      "seconds": 7.18
+    },
+    {
+      "key": "m2_stranded_00",
+      "sound": "VO_m2_stranded_00",
+      "seconds": 8.02
+    },
+    {
+      "key": "m2_stranded_02",
+      "sound": "VO_m2_stranded_02",
+      "seconds": 9.14
+    },
+    {
+      "key": "m2_stranded_03",
+      "sound": "VO_m2_stranded_03",
+      "seconds": 7.63
+    },
+    {
+      "key": "m2_stranded_06",
+      "sound": "VO_m2_stranded_06",
+      "seconds": 8.5
+    },
+    {
+      "key": "m3d_marty_drive",
+      "sound": "VO_m3d_marty_drive",
+      "seconds": 3.24
+    },
+    {
+      "key": "m3d_walt_whatif",
+      "sound": "VO_m3d_walt_whatif",
+      "seconds": 3.04
+    },
+    {
+      "key": "m3d_walt_cornered",
+      "sound": "VO_m3d_walt_cornered",
+      "seconds": 4.0
+    },
+    {
+      "key": "m3d_bully_shout",
+      "sound": "VO_m3d_bully_shout",
+      "seconds": 2.71
+    },
+    {
+      "key": "m3d_marty_find",
+      "sound": "VO_m3d_marty_find",
+      "seconds": 5.53
+    },
+    {
+      "key": "m4_lightning_01",
+      "sound": "VO_m4_lightning_01",
+      "seconds": 9.46
+    },
+    {
+      "key": "m4_lightning_04",
+      "sound": "VO_m4_lightning_04",
+      "seconds": 7.25
+    },
+    {
+      "key": "m5_future_00",
+      "sound": "VO_m5_future_00",
+      "seconds": 8.77
+    },
+    {
+      "key": "m5_future_03",
+      "sound": "VO_m5_future_03",
+      "seconds": 9.42
+    },
+    {
+      "key": "m5_future_06",
+      "sound": "VO_m5_future_06",
+      "seconds": 7.48
+    },
+    {
+      "key": "m5_future_09",
+      "sound": "VO_m5_future_09",
+      "seconds": 6.6
+    },
+    {
+      "key": "m6_hover_00",
+      "sound": "VO_m6_hover_00",
+      "seconds": 7.82
+    },
+    {
+      "key": "m6_hover_01",
+      "sound": "VO_m6_hover_01",
+      "seconds": 4.88
+    },
+    {
+      "key": "m6_hover_06",
+      "sound": "VO_m6_hover_06",
+      "seconds": 3.19
+    },
+    {
+      "key": "m6_hover_09",
+      "sound": "VO_m6_hover_09",
+      "seconds": 8.22
+    },
+    {
+      "key": "m6_hover_12",
+      "sound": "VO_m6_hover_12",
+      "seconds": 7.03
+    },
+    {
+      "key": "m6_almanac_01",
+      "sound": "VO_m6_almanac_01",
+      "seconds": 9.44
+    },
+    {
+      "key": "m6_almanac_03",
+      "sound": "VO_m6_almanac_03",
+      "seconds": 8.14
+    }
+  ],
+  "barks": [
+    {
+      "key": "npc_1955_m1",
+      "sound": "VO_npc_1955_m1",
+      "seconds": 3.17,
+      "text": "Boa tarde, filho. Ora, que bela boia você está usando."
+    },
+    {
+      "key": "npc_1955_m2",
+      "sound": "VO_npc_1955_m2",
+      "seconds": 2.39,
+      "text": "Cuidado aí, garoto. Você vai derrubar alguém."
+    },
+    {
+      "key": "npc_1955_m3",
+      "sound": "VO_npc_1955_m3",
+      "seconds": 3.45,
+      "text": "Ei, você viu aquele carro? Parece que caiu de uma nave."
+    },
+    {
+      "key": "npc_1955_w1",
+      "sound": "VO_npc_1955_w1",
+      "seconds": 3.18,
+      "text": "Ora, boa tarde! Dia lindo para o baile, não é?"
+    },
+    {
+      "key": "npc_1955_w2",
+      "sound": "VO_npc_1955_w2",
+      "seconds": 2.36,
+      "text": "Ah! Você me assustou. É novo na cidade?"
+    },
+    {
+      "key": "npc_1955_w3",
+      "sound": "VO_npc_1955_w3",
+      "seconds": 1.59,
+      "text": "Cuidado com as maneiras, mocinho."
+    },
+    {
+      "key": "npc_1985_m1",
+      "sound": "VO_npc_1985_m1",
+      "seconds": 0.95,
+      "text": "Ei, cuidado, cara."
+    },
+    {
+      "key": "npc_1985_m2",
+      "sound": "VO_npc_1985_m2",
+      "seconds": 2.78,
+      "text": "Salve a torre do relógio! Cada dólar ajuda, amigo."
+    },
+    {
+      "key": "npc_1985_m3",
+      "sound": "VO_npc_1985_m3",
+      "seconds": 2.27,
+      "text": "Belas rodas. Isso é legalizado para andar na rua?"
+    },
+    {
+      "key": "npc_1985_w1",
+      "sound": "VO_npc_1985_w1",
+      "seconds": 2.61,
+      "text": "Oi! Desculpe, estou atrasada para o trabalho no shopping."
+    },
+    {
+      "key": "npc_1985_w2",
+      "sound": "VO_npc_1985_w2",
+      "seconds": 2.46,
+      "text": "Devagar, querido. Onde está o fogo?"
+    },
+    {
+      "key": "npc_1985_w3",
+      "sound": "VO_npc_1985_w3",
+      "seconds": 1.59,
+      "text": "Ah, meu Deus, você me assustou!"
+    },
+    {
+      "key": "npc_2015_m1",
+      "sound": "VO_npc_2015_m1",
+      "seconds": 3.31,
+      "text": "Uau. Jaqueta retrô. Bem anos oitenta."
+    },
+    {
+      "key": "npc_2015_m2",
+      "sound": "VO_npc_2015_m2",
+      "seconds": 2.42,
+      "text": "Cuidado. A faixa de voo passa bem aí em cima."
+    },
+    {
+      "key": "npc_2015_m3",
+      "sound": "VO_npc_2015_m3",
+      "seconds": 2.64,
+      "text": "Você ainda anda a pé? Arranja uma prancha, cara."
+    },
+    {
+      "key": "npc_2015_w1",
+      "sound": "VO_npc_2015_w1",
+      "seconds": 2.04,
+      "text": "Ei! Adorei o visual vintage."
+    },
+    {
+      "key": "npc_2015_w2",
+      "sound": "VO_npc_2015_w2",
+      "seconds": 2.95,
+      "text": "No meu tempo, os jovens olhavam para onde iam."
+    },
+    {
+      "key": "npc_2015_w3",
+      "sound": "VO_npc_2015_w3",
+      "seconds": 2.47,
+      "text": "Cuidado. Aqueles garotos nas pranchas são encrenca."
+    },
+    {
+      "key": "hero_sorry_1",
+      "sound": "VO_hero_sorry_1",
+      "seconds": 1.6,
+      "text": "Uau, desculpe por isso."
+    },
+    {
+      "key": "hero_sorry_2",
+      "sound": "VO_hero_sorry_2",
+      "seconds": 1.67,
+      "text": "Com licença. Foi minha culpa."
+    },
+    {
+      "key": "hero_hi_1",
+      "sound": "VO_hero_hi_1",
+      "seconds": 0.98,
+      "text": "Ei, tudo bem?"
+    },
+    {
+      "key": "hero_hi_2",
+      "sound": "VO_hero_hi_2",
+      "seconds": 1.77,
+      "text": "Ah, oi. Só de passagem."
+    },
+    {
+      "key": "hero_odd_1",
+      "sound": "VO_hero_odd_1",
+      "seconds": 1.8,
+      "text": "É. É uma longa história."
+    },
+    {
+      "key": "hero_odd_2",
+      "sound": "VO_hero_odd_2",
+      "seconds": 1.58,
+      "text": "Você não acreditaria se eu contasse."
+    },
+    {
+      "key": "hero_heavy",
+      "sound": "VO_hero_heavy",
+      "seconds": 0.8,
+      "text": "Isso é pesado."
+    },
+    {
+      "key": "gang_lead_t1",
+      "sound": "VO_gang_lead_t1",
+      "seconds": 0.57,
+      "text": "Pega ele!"
+    },
+    {
+      "key": "gang_lead_t2",
+      "sound": "VO_gang_lead_t2",
+      "seconds": 1.63,
+      "text": "Você vai cair, garoto novo!"
+    },
+    {
+      "key": "gang_lead_t3",
+      "sound": "VO_gang_lead_t3",
+      "seconds": 2.14,
+      "text": "Ninguém me ultrapassa na minha própria rua!"
+    },
+    {
+      "key": "gang_lead_t4",
+      "sound": "VO_gang_lead_t4",
+      "seconds": 1.45,
+      "text": "Corta ele! Corta ele!"
+    },
+    {
+      "key": "gang_lead_b1",
+      "sound": "VO_gang_lead_b1",
+      "seconds": 1.33,
+      "text": "Acelera, seus molengas!"
+    },
+    {
+      "key": "gang_boy_t1",
+      "sound": "VO_gang_boy_t1",
+      "seconds": 1.4,
+      "text": "Uhu! Agora pegamos ele!"
+    },
+    {
+      "key": "gang_boy_t2",
+      "sound": "VO_gang_boy_t2",
+      "seconds": 2.25,
+      "text": "Mais rápido, mais rápido! Ele está perdendo velocidade!"
+    },
+    {
+      "key": "gang_boy_t3",
+      "sound": "VO_gang_boy_t3",
+      "seconds": 1.34,
+      "text": "Não tem para onde correr, amigo!"
+    },
+    {
+      "key": "gang_boy_b1",
+      "sound": "VO_gang_boy_b1",
+      "seconds": 2.38,
+      "text": "Uau! Quase cai! Esperem, gente!"
+    },
+    {
+      "key": "gang_girl_t1",
+      "sound": "VO_gang_girl_t1",
+      "seconds": 1.54,
+      "text": "Bela jaqueta, perdedor!"
+    },
+    {
+      "key": "gang_girl_t2",
+      "sound": "VO_gang_girl_t2",
+      "seconds": 1.12,
+      "text": "Você chama isso de andar de prancha?"
+    },
+    {
+      "key": "gang_girl_t3",
+      "sound": "VO_gang_girl_t3",
+      "seconds": 1.36,
+      "text": "Continua correndo, espertinho!"
+    },
+    {
+      "key": "gang_girl_b1",
+      "sound": "VO_gang_girl_b1",
+      "seconds": 1.61,
+      "text": "Argh! Ei, espera por mim!"
+    }
+  ]
+}

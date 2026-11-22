@@ -1,0 +1,338 @@
+{
+  "_comment": "Story cutscenes, written by Tools/cutscenes/make_mix.py. video: Content/Movies; sound: the imported SoundWave of the same mix; lines: subtitles, seconds from the start. Game-side fields (kept by make_mix.py): trigger = the story beat that starts the film ('start' of its mission, 'complete' of the mission before it, or the white flash of that mission's 'jump'); in / out = how the picture joins the play ('black', 'white', 'cut'); head / tail = seconds of the file not shown (cafe80s is cut on its last full picture, before its own fade to black: play carries straight on from it); replaces = opening dialogue steps of the next mission the film already shows. See Docs/STORY_FLOW.md.",
+  "cutscenes": [
+    {
+      "id": "opening",
+      "when": "before",
+      "mission": "m1_experiment",
+      "video": "CS_opening.mp4",
+      "sound": "CS_opening",
+      "seconds": 20.0,
+      "title": "Shopping Twin Pines, 1985",
+      "lines": [
+        {
+          "from": 3.74,
+          "to": 8.17,
+          "speaker": "Doc",
+          "text": "Marty! Contemple! Uma máquina do tempo dentro de um carro!"
+        },
+        {
+          "from": 9.14,
+          "to": 12.37,
+          "speaker": "Marty",
+          "text": "Espera, você fez uma máquina do tempo com isso?"
+        },
+        {
+          "from": 12.56,
+          "to": 16.63,
+          "speaker": "Doc",
+          "text": "Escolha uma data! A noite em que seus pais se conheceram: 5 de novembro de 1955!"
+        },
+        {
+          "from": 17.8,
+          "to": 19.79,
+          "speaker": "Marty",
+          "text": "Eles nunca pararam de contar essa história."
+        }
+      ],
+      "trigger": "start",
+      "in": "black",
+      "out": "black",
+      "replaces": 1
+    },
+    {
+      "id": "arrival",
+      "when": "before",
+      "mission": "m2_stranded",
+      "video": "CS_arrival.mp4",
+      "sound": "CS_arrival",
+      "seconds": 20.0,
+      "title": "Condomínio Lyon, 1955",
+      "lines": [
+        {
+          "from": 4.84,
+          "to": 8.37,
+          "speaker": "Ellie",
+          "text": "Você está bem? Nunca te vi por Hill Valley antes."
+        },
+        {
+          "from": 8.74,
+          "to": 11.79,
+          "speaker": "Walt",
+          "text": "Na verdade, quem caiu fui eu. Mas estou bem, obrigado."
+        },
+        {
+          "from": 12.8,
+          "to": 15.47,
+          "speaker": "Ellie",
+          "text": "Walt, cale a boca. Eu sou a Ellie. E você, quem é, moço?"
+        },
+        {
+          "from": 16.98,
+          "to": 20.0,
+          "speaker": "Marty",
+          "text": "Walt e Ellie? Esses são meus pais."
+        }
+      ],
+      "trigger": "jump",
+      "in": "white",
+      "out": "black",
+      "head": 0.4
+    },
+    {
+      "id": "cafe55",
+      "when": "before",
+      "mission": "m3_dance",
+      "video": "CS_cafe55.mp4",
+      "sound": "CS_cafe55",
+      "seconds": 20.0,
+      "title": "Café do Lou, 1955",
+      "lines": [
+        {
+          "from": 0.0,
+          "to": 4.07,
+          "speaker": "Ellie",
+          "text": "O baile é hoje à noite e ninguém me chamou ainda. Indireta, indireta."
+        },
+        {
+          "from": 5.14,
+          "to": 8.69,
+          "speaker": "Marty",
+          "text": "Ellie, eu não posso. Mas sabe quem adoraria te levar? O Walt."
+        },
+        {
+          "from": 10.1,
+          "to": 14.33,
+          "speaker": "Marty",
+          "text": "Walt, hoje à noite você chama ela para dançar. Sem desculpas."
+        },
+        {
+          "from": 14.56,
+          "to": 16.57,
+          "speaker": "Walt",
+          "text": "Eu? Ela nem sabe que eu existo."
+        },
+        {
+          "from": 17.56,
+          "to": 19.99,
+          "speaker": "Marty",
+          "text": "Se ele não fizer, eu também não vou existir."
+        }
+      ],
+      "trigger": "complete",
+      "in": "black",
+      "out": "black"
+    },
+    {
+      "id": "dance",
+      "when": "before",
+      "mission": "m4_lightning",
+      "video": "CS_dance.mp4",
+      "sound": "CS_dance",
+      "seconds": 20.0,
+      "title": "Encanto Sob o Mar, 1955",
+      "lines": [
+        {
+          "from": 3.56,
+          "to": 6.45,
+          "speaker": "Walt",
+          "text": "Ellie, posso te levar em casa depois?"
+        },
+        {
+          "from": 6.8,
+          "to": 8.17,
+          "speaker": "Ellie",
+          "text": "Eu estava torcendo para você perguntar."
+        },
+        {
+          "from": 12.12,
+          "to": 16.51,
+          "speaker": "Doc",
+          "text": "Marty, dez e quatro, nem um segundo depois. Vá para a linha de partida."
+        },
+        {
+          "from": 16.98,
+          "to": 19.63,
+          "speaker": "Marty",
+          "text": "Obrigado por tudo, Doc. Até daqui a 30 anos."
+        }
+      ],
+      "trigger": "complete",
+      "in": "black",
+      "out": "black"
+    },
+    {
+      "id": "home85",
+      "when": "before",
+      "mission": "m5_future",
+      "video": "CS_home85.mp4",
+      "sound": "CS_home85",
+      "seconds": 20.0,
+      "title": "Hill Valley, 1985",
+      "lines": [
+        {
+          "from": 0.88,
+          "to": 4.57,
+          "speaker": "Walt",
+          "text": "Lá está ele. Estávamos contando aos vizinhos como nos conhecemos."
+        },
+        {
+          "from": 7.36,
+          "to": 10.37,
+          "speaker": "Ellie",
+          "text": "No baile. Seu pai foi tão corajoso naquela noite."
+        },
+        {
+          "from": 11.76,
+          "to": 14.53,
+          "speaker": "Marty",
+          "text": "É. Ouvi dizer que deu bem certo."
+        },
+        {
+          "from": 17.36,
+          "to": 20.0,
+          "speaker": "Doc",
+          "text": "Marty! Sem tempo para explicar! Entre no carro!"
+        }
+      ],
+      "trigger": "jump",
+      "in": "white",
+      "out": "black",
+      "head": 0.4
+    },
+    {
+      "id": "cafe80s",
+      "when": "before",
+      "mission": "m6_hover",
+      "video": "CS_cafe80s.mp4",
+      "sound": "CS_cafe80s",
+      "seconds": 20.0,
+      "title": "Café Anos 80, 2015",
+      "lines": [
+        {
+          "from": 1.3,
+          "to": 4.47,
+          "speaker": "Chefe da gangue",
+          "text": "Que colete, garoto retrô. Você está no meu lugar."
+        },
+        {
+          "from": 7.0,
+          "to": 9.09,
+          "speaker": "Marty",
+          "text": "Tem bastante lugar, amigo. Escolha outro."
+        },
+        {
+          "from": 9.78,
+          "to": 12.19,
+          "speaker": "Chefe da gangue",
+          "text": "Ninguém fala assim comigo. Ninguém!"
+        },
+        {
+          "from": 17.3,
+          "to": 19.31,
+          "speaker": "Chefe da gangue",
+          "text": "Peguem as pranchas! Pega ele!"
+        }
+      ],
+      "replaces": 2,
+      "trigger": "complete",
+      "in": "black",
+      "out": "cut",
+      "tail": 0.45
+    },
+    {
+      "id": "almanac",
+      "when": "before",
+      "mission": "m6_almanac",
+      "video": "CS_almanac.mp4",
+      "sound": "CS_almanac",
+      "seconds": 20.0,
+      "title": "Hill Valley, 2015",
+      "lines": [
+        {
+          "from": 0.0,
+          "to": 4.81,
+          "speaker": "Chefe da gangue",
+          "text": "Cinquenta anos de resultados, entrega expressa para o vovô, 1955."
+        },
+        {
+          "from": 5.52,
+          "to": 6.25,
+          "speaker": "Garota da gangue",
+          "text": "E aí?"
+        },
+        {
+          "from": 7.04,
+          "to": 8.49,
+          "speaker": "Chefe da gangue",
+          "text": "Aí a cidade é nossa."
+        },
+        {
+          "from": 14.36,
+          "to": 18.45,
+          "speaker": "Doc",
+          "text": "Marty, se esse livro chegar ao passado, todo este futuro desmorona!"
+        },
+        {
+          "from": 18.56,
+          "to": 19.77,
+          "speaker": "Marty",
+          "text": "Então não vamos deixar chegar."
+        }
+      ],
+      "trigger": "complete",
+      "in": "black",
+      "out": "black",
+      "replaces": 2
+    },
+    {
+      "id": "ending",
+      "when": "after",
+      "mission": "m6_almanac",
+      "video": "CS_ending.mp4",
+      "sound": "CS_ending",
+      "seconds": 20.0,
+      "title": "Hill Valley, 1985",
+      "lines": [
+        {
+          "from": 4.16,
+          "to": 9.17,
+          "speaker": "Doc",
+          "text": "O futuro não é fixo, Marty. Nem o seu, nem o de ninguém. Cuide desses dois."
+        },
+        {
+          "from": 9.7,
+          "to": 10.97,
+          "speaker": "Marty",
+          "text": "Vou te ver de novo, Doc?"
+        },
+        {
+          "from": 11.12,
+          "to": 12.09,
+          "speaker": "Doc",
+          "text": "Pode apostar!"
+        },
+        {
+          "from": 16.6,
+          "to": 19.53,
+          "speaker": "Ellie",
+          "text": "Marty, venha para casa, querido. Está tarde."
+        }
+      ],
+      "trigger": "jump",
+      "in": "white",
+      "out": "black",
+      "head": 0.4
+    },
+    {
+      "id": "outro",
+      "when": "credits",
+      "mission": "",
+      "video": "CS_outro.mp4",
+      "sound": "CS_outro",
+      "seconds": 20.0,
+      "title": "",
+      "lines": []
+    }
+  ]
+}
